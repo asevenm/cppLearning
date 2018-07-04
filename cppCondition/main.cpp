@@ -126,11 +126,17 @@ int main(int argc, const char * argv[]) {
     }
     cout << maxStr << " " << cnt << endl;*/
     
-    vector<int> arr1 = {1, 2, 3, 4, 5, 6, 7};
+    /*vector<int> arr1 = {1, 2, 3, 4, 5, 6, 7};
     vector<int> arr2 = {1, 2, 3, 5};
-//    bool res = compare(arr1, arr2);
+    bool res = compare(arr1, arr2);
     cout << (compare(arr1, arr2) ? "true" : "false") << endl;
-    cout << (isPrefix(arr1, arr2) ? "true" : "false" ) << endl;
+    cout << (isPrefix(arr1, arr2) ? "true" : "false" ) << endl;*/
+    string str1, str2;
+    cout << "please enter two strings" << endl;
+    cin >> str1 >> str2;
+    do {
+        cout << (str1.size() > str2.size() ? str2 : str1) << endl;
+    } while(cin >> str1 >> str2);
     return 0;
     
 }
