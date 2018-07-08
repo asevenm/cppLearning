@@ -9,11 +9,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <stdexcept>
 using std::string;
 using std::vector;
 using std::cout;
 using std::endl;
 using std::cin;
+using std::runtime_error;
 
 bool compare(const vector<int> &arr1, const vector<int> &arr2) {
     if(arr1.size() > arr2.size()) {
@@ -131,12 +133,71 @@ int main(int argc, const char * argv[]) {
     bool res = compare(arr1, arr2);
     cout << (compare(arr1, arr2) ? "true" : "false") << endl;
     cout << (isPrefix(arr1, arr2) ? "true" : "false" ) << endl;*/
-    string str1, str2;
+    
+    /*string str1, str2;
     cout << "please enter two strings" << endl;
     cin >> str1 >> str2;
     do {
         cout << (str1.size() > str2.size() ? str2 : str1) << endl;
-    } while(cin >> str1 >> str2);
+    } while(cin >> str1 >> str2);*/
+    
+    /*string str, preStr;
+    bool isRepeat = false;
+    while(cin >> str) {
+        if(preStr == str) {
+            isRepeat = true;
+            cout << preStr << " is repeated" << endl;
+            break;
+        } else
+            preStr = str;
+    }
+    if(!isRepeat)
+        cout << "no word repeated" << endl;*/
+    
+    /*string str, preStr;
+    bool isRepeat = false;
+    while(cin >> str){
+        if(str[0] != toupper(str[0])) {
+            preStr = str;
+            continue;
+        } else
+            if(preStr == str){
+                isRepeat = true;
+                cout << preStr << "is repeated" << endl;
+                break;
+            } else
+                preStr = str;
+    }
+    if(!isRepeat)
+        cout << "no word repeated" << endl;*/
+    
+    /*int a, b;
+    cin >> a >> b;
+    if(b == 0)
+        throw runtime_error("b can't be 0");
+    cout << a / b << endl;*/
+    
+    int a, b;
+    bool tryAgain = false;
+    cin >> a >> b;
+    do {
+        try {
+            tryAgain = false;
+            if(b == 0)
+                throw runtime_error("b can't be 0");
+            cout << a / b << endl;
+        } catch(runtime_error err) {
+            cout << err.what() <<"\n Try again ? Enter y or n" << endl;
+            char c;
+            cin >> c;
+            if(!cin || c == 'n')
+                break;
+            else
+                cin >> b;
+                tryAgain = true;
+        }
+    } while (tryAgain);
+    
     return 0;
     
 }
