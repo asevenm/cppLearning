@@ -10,6 +10,8 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <algorithm>
+#include <numeric>
 
 using namespace std;
 
@@ -64,6 +66,10 @@ ostream &print(ostream &os, const Sales_data &item) {
     return os;
 }
 
+bool compareIsbn(const Sales_data &s1, const Sales_data &s2) {
+    return s1.isbn() < s2.isbn();
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     if (argc < 3) {
@@ -78,25 +84,34 @@ int main(int argc, const char * argv[]) {
     
     if(argc >= 3) {
         
-        // ofstream out(argv[2]);
-        ofstream out2(argv[2], ofstream::app);
-    
-        Sales_data total;
-        if(read(in, total)) {
-            Sales_data trans;
-            while(read(in, trans)) {
-                if(total.isbn() == trans.isbn()) {
-                    total.combine(trans);
-                } else {
-                    print(out2, total) << endl;
-                    total = trans;
-                }
-            }
-            print(out2, total) << endl;
-        } else {
-            cerr << "No Data!" << endl;
-            return -1;
-        }
+        ofstream out(argv[2]);
+        // ofstream out2(argv[2], ofstream::app);
+//
+//        Sales_data total;
+//        if(read(in, total)) {
+//            Sales_data trans;
+//            while(read(in, trans)) {
+//                if(total.isbn() == trans.isbn()) {
+//                    total.combine(trans);
+//                } else {
+//                    print(out2, total) << endl;
+//                    total = trans;
+//                }
+//            }
+//            print(out2, total) << endl;
+//        } else {
+//            cerr << "No Data!" << endl;
+//            return -1;
+//        }
+        
+        // 排序
+        vector<Sales_data> vsd;
+        for(Sales_data item; read(in, item); vsd.push_back(item));
+//        sort(vsd.begin(), vsd.end(), compareIsbn);
+        sort(vsd.begin(), vsd.end(),
+             [](const Sales_data &a, const Sales_data &b) { return a.isbn() < b.isbn(); });
+        for(const auto &sd: vsd)
+            print(cout, sd) << endl;
     }
     return 0;
 }
