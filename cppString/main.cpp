@@ -47,11 +47,11 @@ int main(int argc, const char * argv[]) {
     cout << res << endl;*/
     
     //字符串操作
-    /*string str("I love wangdan");
+    /*string str("I love");
     for(auto &c: str)
         c = 'X';
     cout << str << endl;*/
-    /*string str("I, love wangdan!");
+    /*string str("I, love");
     string res;
     for(decltype(str.size()) index = 0; index != str.size(); ++index)
         if(!ispunct(str[index])){
@@ -59,7 +59,7 @@ int main(int argc, const char * argv[]) {
         }
     
     cout << res << endl;*/
-    string str = "I love wangdan";
+    string str = "I love";
     decltype(str.size()) i = 0;
     while( i != str.size()) {
         str[i] = 'X';

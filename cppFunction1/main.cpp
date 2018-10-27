@@ -50,7 +50,7 @@ int main(int argc, const char * argv[]) {
     6.2.1*/
     
     /*6.17
-    string str = "I love Wang dan!";
+    string str = "I love";
     bool boolret = hasCapital(str);
     cout << "this string " << (boolret ? "has " : "don't have ") << "uppercase literal" << endl;
     convertToLowercase(str);

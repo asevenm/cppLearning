@@ -49,7 +49,7 @@ int main(int argc, const char * argv[]) {
     Person person;
     print(cout, person) << endl;
     Person aseven("aseven");
-    Person wang("wang dan", "shanghai");
+    Person wang("jiamin", "shanghai");
     Person luo(cin);
     print(cout, aseven) << endl;
     print(cout, wang) << endl;

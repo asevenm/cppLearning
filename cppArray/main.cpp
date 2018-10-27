@@ -90,7 +90,7 @@ int main(int argc, const char * argv[]) {
         cout << "str3 and str4 are not equal" << endl;*/
     
     /*const char str1[] = "luolinfeng";
-    const char str2[] = "wangdan";
+    const char str2[] = "jiamin";
     char str3[100];
     strcpy(str3, str1);
     strcat(str3, " ");

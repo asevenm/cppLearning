@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
     std::vector<int> arr = {1, 3, 4, 5, 8};
     print(arr.begin(), arr.end());
     
-    /*std::string a = "wang dan";
+    /*std::string a = "test en";
     std::string b = "luo lin feng";
     std::cout << (isShorter(a, b) ? "a < b" : "b < a") << std::endl;*/
     

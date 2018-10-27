@@ -250,7 +250,7 @@ int main(int argc, const char * argv[]) {
     // copyOperation();
     // firstEle();
     // deleteOperation();
-    /*forward_list<string> fs = {"wo", "xi", "huan", "wang", "dan"};
+    /*forward_list<string> fs = {"wo", "xi", "huan", "jia", "min"};
     string s1 = "xi";
     string s2 = "hen";
     insertForwardList(fs, s1, s2);*/
@@ -258,7 +258,7 @@ int main(int argc, const char * argv[]) {
     // vectorIncrease();
     // initString();
     
-    /*string str = "I love wang dan tho I don't know much about her, I want to chat with her thru wechat";
+    /*string str = "I love jia min tho I don't know much about her, I want to chat with her thru wechat";
     string tho = "tho";
     string though = "though";
     // stringOperation(str, tho, though);

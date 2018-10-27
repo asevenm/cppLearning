@@ -90,7 +90,7 @@ Sales_data add(const Sales_data &a, const Sales_data &b) {
 int main(int argc, const char * argv[]) {
     Sales_data book0;
     Sales_data book1("l123");
-    Sales_data book2("wang123", 10, 5);
+    Sales_data book2("zhao123", 10, 5);
     Sales_data book3(cin);
     cout << " book0" << " ";
     print(cout, book0);

@@ -129,18 +129,14 @@ int main(int argc, const char * argv[]) {
     
     /*family_type families;
     addFamily(families, "luo");
-    addFamily(families, "wang");
     addFamily(families, "luo");
     // print(families);
     addChild(families, "luo", "tunan");
-    addChild(families, "wang", "dan");
     print(families);*/
     
     family_type_new families_new;
     addFamily(families_new, "luo");
-    addFamily(families_new, "wang");
     addChild(families_new, "luo", "linfeng", "0906");
-    addChild(families_new, "wang", "dan", "don't know");
     print(families_new);
     
     // wordsLines();

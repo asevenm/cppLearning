@@ -54,7 +54,7 @@ void familyProgram() {
     addFamily(families, "luo");
     addFamily(families, "wang");
     addChildren(families, "luo", "linfeng");
-    addChildren(families, "wang", "dan");
+    addChildren(families, "wang");
     addChildren(families, "zhao", "jiamin");
     print(families);
 }

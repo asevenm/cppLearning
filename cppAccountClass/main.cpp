@@ -44,7 +44,7 @@ int main(int argc, const char * argv[]) {
     print(cout, luo);
     cout << endl;
     
-    Account wang("wang dan");
+    Account wang("jia min");
     print(cout, wang);
     cout << endl;
     
