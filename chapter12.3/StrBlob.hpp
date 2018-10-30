@@ -1,24 +1,24 @@
 //
 //  StrBlob.hpp
-//  chapter12.19
+//  chapter12.3
 //
-//  Created by 罗林峰 on 10/6/18.
+//  Created by 罗林峰 on 10/28/18.
 //  Copyright © 2018 罗林峰. All rights reserved.
 //
 
 #ifndef StrBlob_hpp
 #define StrBlob_hpp
 
-class StrBlobPtr;
-class ConstStrBlobPtr;
-
 #include <stdio.h>
+#include <memory>
 #include <vector>
 #include <string>
 #include <initializer_list>
-#include <memory>
 
 using namespace std;
+
+class StrBlobPtr;
+class ConstStrBlobPtr;
 
 class StrBlob {
     friend class StrBlobPtr;
@@ -31,7 +31,7 @@ public:
     size_type size() const { return data->size(); }
     bool empty() const { return data->empty(); }
     
-    void push_back(const string &s);
+    void push_back(const string&);
     void pop_back();
     
     string &front();
@@ -41,6 +41,7 @@ public:
     
     StrBlobPtr begin();
     StrBlobPtr end();
+    
     
 private:
     shared_ptr<vector<string>> data;
