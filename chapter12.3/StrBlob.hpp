@@ -27,6 +27,8 @@ public:
     typedef vector<string>::size_type size_type;
     StrBlob();
     StrBlob(initializer_list<string> il);
+    StrBlob(const StrBlob&);
+    StrBlob& operator=(const StrBlob&);
     
     size_type size() const { return data->size(); }
     bool empty() const { return data->empty(); }

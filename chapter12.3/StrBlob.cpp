@@ -13,6 +13,14 @@
 StrBlob::StrBlob(): data(make_shared<vector<string>>()) {}
 StrBlob::StrBlob(initializer_list<string> il): data(make_shared<vector<string>>(il)) {}
 
+StrBlob::StrBlob(const StrBlob &sb):
+data(make_shared<vector<strgin>>(*sb.data)) { };
+
+StrBlob& StrBlob::operator=(const StrBlob &sb) {
+    // 不需要用临时变量因为smarter 指针自动释放
+    data = make_shared<vector<string>>((*sb.data));
+    return *this;
+}
 void StrBlob::check(size_type pos, const string &msg) const {
     if (pos > data->size())
         throw out_of_range(msg);
