@@ -34,6 +34,11 @@
 			<key>orderHint</key>
 			<integer>34</integer>
 		</dict>
+		<key>chapter13.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>35</integer>
+		</dict>
 		<key>cppAccountClass.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
